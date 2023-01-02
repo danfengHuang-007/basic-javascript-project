@@ -218,7 +218,7 @@ switch(day){
         break;
 }
 document.write("今天是 ： "+ today);
-*/
+
 var day = new Date().getDay();//通过日期对象获取数字形式的星期几
 var today;
 if(day==8){
@@ -244,3 +244,48 @@ if(day==8){
     
 }
 document.write("今天是 ： "+ today);
+
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+document.write("使用for循环打印 0 到 4<br>如果发现是3，就<span style='color:red'>放弃本次循环，并且进入下一次</span>循环<br>");
+// for(i=0;i<5;i++){
+//     if(i==3){
+//         continue;
+//     }
+//     p(i);
+// }
+for(i=0;i<5;i++){
+    if(i==3){
+        break;
+    }
+    p(i);
+}
+// var i =0;
+// do{
+//     p(i);
+//     i++;
+// }while(i<5);
+// for(var i =0; i<5; i++){
+//     p(i);
+// }
+// while(i<5){
+//     p(i);
+//     i++;
+// }
+*/
+document.write("试图调用不存在的函数f2()就会报错，并且导致javascript中止执行，后面的代码也不会执行了");
+function f1(){
+}
+try{
+    document.write("试图调用不存在的函数f2()<br>");
+    f2 ();
+}
+catch(err){
+    document.write("捕捉到错误产生:");
+    document.write(err.message)
+}
+document.write('<br>')
+
+document.write("shabiSuman");
