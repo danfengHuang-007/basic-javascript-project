@@ -274,7 +274,7 @@ for(i=0;i<5;i++){
 //     p(i);
 //     i++;
 // }
-*/
+
 document.write("试图调用不存在的函数f2()就会报错，并且导致javascript中止执行，后面的代码也不会执行了");
 function f1(){
 }
@@ -287,5 +287,40 @@ catch(err){
     document.write(err.message)
 }
 document.write('<br>')
-
 document.write("shabiSuman");
+var x = new Number (123);
+document.write('数字对象x的值:'+ x);
+document.write("<br>")
+document.write('数字对象x的类型:'+ typeof(x))
+document.write("<br>")
+var y = 123;
+document.write('数字对象y的值:'+ y);
+document.write("<br>")
+document.write('数字对象y的类型:'+ typeof(y))
+document.write('Number对象的最小值:'+Number.MIN_VALUE);
+document.write('<br>');
+document.write('Number对象的最大值:'+Number.MAX_VALUE);
+*/
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+var a = new Number(123);
+var b = new Number(3.1415926);
+/*
+p('通过非数字字符串"123abc"创建出来的Number对象 a的值是：'+a);
+p('但是, a==Number.NaN会返回:'+(a==Number.NaN));
+p('正确判断是否是NaN的方式是调用isNaN函数:'+isNaN(a));
+p("数字对象123通过toFixed(2) 保留两位小数:"+a.toFixed(2));
+p("PI 通过toFixed(3) 保留三位小数:"+b.toFixed(3));
+p("数字对象123通过toExponential 返回计数法表达 "+a.toExponential());
+p("数字对象3.1415926通过toExponential 返回计数法表达 "+b.toExponential());
+
+p('数字对象a的类型是: '+typeof(a));
+var c = a.valueOf();
+p('通过valueOf()返回的值的类型是: '+typeof(c));
+*/
+
+
+
+
