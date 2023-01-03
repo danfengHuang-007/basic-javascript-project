@@ -319,8 +319,84 @@ p("数字对象3.1415926通过toExponential 返回计数法表达 "+b.toExponent
 p('数字对象a的类型是: '+typeof(a));
 var c = a.valueOf();
 p('通过valueOf()返回的值的类型是: '+typeof(c));
+
+var x = '5';
+var y = new String(x);
+document.write("变量x的值是:"+x);
+document.write('<br>');
+document.write("变量x的类型是:"+typeof(x));
+document.write('<br>');
+document.write("变量y的值是:"+y);
+document.write('<br>');
+document.write("变量y的类型是:"+typeof(y));
+document.write('<br>');
+var y = new String("Hello JavaScript");
+document.write("通过.length属性获取字符串'Hello JavaScript'的长度: "+y.length);
+document.write('<br>');
+document.write('通过 charAt(0)获取位置0的字符串： '+ y.charAt(0));
+document.write('<br>');
+document.write('通过 charCodeAt(0)获取位置0的字符的 Unicode码 ：'+ y.charCodeAt(0));
+var x = new String('Hello');
+var y = new String('Javascript');
+document.write('通过函数concat()把x和y连接起来: '+ x.concat(y));
+var y = new String("Hello JavaScript");
+document.write('字符串y的值: '+ y);
+document.write('<br>');
+document.write('通过 indexOf ("a")获取子字符"a" 第一次出现的位置 '+y.indexOf('a'));
+document.write('<br>');
+document.write('通过 lastIndexOf ("a")获取子字符"a" 最后出现的位置 '+ y.lastIndexOf("a"));
+var x = new String ('Hello');
+var y = new String('Hello');
+var z = new String('aloha');
+document.write('字符串x的值: '+x);
+document.write('<br>');
+document.write('字符串y的值: '+y);
+document.write('<br>');
+document.write('字符串z的值: '+z);
+document.write('<br>');
+document.write('通过 localeCompare()判断 x和y是否相等 '+ x.localeCompare(y));
+document.write('<br>');
+document.write('通过 localeCompare()判断 x和z是否相等 '+ x.localeCompare(z));
+document.write('<br>');
+var x = new String("Hello JavaScript");
+document.write('字符串x的值: '+x);
+document.write('<br>');
+document.write('x.substring (0,3) 获取位0到3的字符串： '+x.substring(0,3));
+document.write('<br>');
+
+var x = new String("Hello This Is JavaScript");
+// document.write('字符串x的值: '+x);
+// document.write('<br>');
+
+var y = x.split(" ");
+document.write('通过空格分隔split(" "),得到数组'+y);
+document.write('<br>');
+
+var z = x.split(" ", 2);
+document.write('通过空格分隔split(" ",2),得到数组，并且只保留前两个'+z);
 */
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+var x = new String("Hello JavaScript");
+/*
+p('这个是原字符串: '+x);
+var y = x.replace('a','o');
+p('只替换第一个 a:  '+y);
+var regs = new RegExp('a','g');
+var z = x.replace(regs,'o');
+p('替换掉所有的 a:  '+z);
+*/
+var temp =x.charAt(0);
+p('charAt返回的值: '+temp); // H
+p('其类型是: '+ typeof temp);
 
+var temp = x.concat('!!!');
+p('concat返回的值'+temp);
+p('其类型是: '+ typeof temp);
 
-
+var temp = x.substring(0,5);
+p('substring返回的值: '+ temp);
+p('其类型是: '+ typeof temp);
 

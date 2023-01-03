@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice5</title>
+    <script>
+        function represu(){
+            var yuanzifu = document.getElementById('srcstr').value;
+            var chaxun = document.getElementById('search').value;
+            var tihuan = document.getElementById('repto').value;
+            var result = yuanzifu.replace(chaxun, tihuan);
+            document.getElementById('represu').value = result;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td width="40%">源字符串</td>
+            <td width="55%">
+                <textarea id="srcstr">example</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">查询</td>
+            <td>
+                <input id="search">
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">替换为</td>
+            <td>
+                <input id="repto">
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">替换结果</td>
+            <td>
+                <textarea id="represu"></textarea>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" onclick="represu()" value="替换">
+</body>
+</html>
