@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="http-equiv" content="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Test</title>
+    <script>
+        function get_input(){
+            return document.getElementById("js-in").value;
+        }
+
+        function sort_by_word(){
+            var string_arrray = get_input().split(" "); // 得到字符串数组
+            return string_arrray.sort();
+
+        }
+
+        function sort_by_let(){
+            var let_array = get_input().split("");
+            return let_array.sort();
+
+        }
+
+        function set_word(){
+            document.getElementById("js-up").value = sort_by_word().join(" "); // 将数组还原成字符串
+            document.getElementById("js-do").value = sort_by_word().reverse().join(" ");
+
+        }
+
+        function set_let(){
+            document.getElementById("js-up").value = sort_by_let().join("");
+            document.getElementById("js-do").value = sort_by_let().reverse().join("");
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td width="40%">随机输入英文字符串:</td>
+            <td width="55%">
+                <textarea id="js-in">example</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">正排序结果:</td>
+            <td>
+                <textarea id="js-up"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">倒排序结果:</td>
+            <td>
+                <textarea id="js-do"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%"></td>
+            <td>
+                <button id="let" onclick="set_let()">按照字母排序</button>
+            </td>
+        </tr>
+        <tr>
+            <td width="40%"></td>
+            <td>
+                <button id="word" onclick="set_word()">按照单词排序</button>
+                
+            </td>
+        </tr>
+
+
+    </table>
+</body>
+</html>

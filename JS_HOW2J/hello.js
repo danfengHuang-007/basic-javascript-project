@@ -274,7 +274,6 @@ for(i=0;i<5;i++){
 //     p(i);
 //     i++;
 // }
-
 document.write("试图调用不存在的函数f2()就会报错，并且导致javascript中止执行，后面的代码也不会执行了");
 function f1(){
 }
@@ -300,14 +299,12 @@ document.write('数字对象y的类型:'+ typeof(y))
 document.write('Number对象的最小值:'+Number.MIN_VALUE);
 document.write('<br>');
 document.write('Number对象的最大值:'+Number.MAX_VALUE);
-*/
 function p(s){
     document.write(s);
     document.write('<br>');
 }
 var a = new Number(123);
 var b = new Number(3.1415926);
-/*
 p('通过非数字字符串"123abc"创建出来的Number对象 a的值是：'+a);
 p('但是, a==Number.NaN会返回:'+(a==Number.NaN));
 p('正确判断是否是NaN的方式是调用isNaN函数:'+isNaN(a));
@@ -315,11 +312,9 @@ p("数字对象123通过toFixed(2) 保留两位小数:"+a.toFixed(2));
 p("PI 通过toFixed(3) 保留三位小数:"+b.toFixed(3));
 p("数字对象123通过toExponential 返回计数法表达 "+a.toExponential());
 p("数字对象3.1415926通过toExponential 返回计数法表达 "+b.toExponential());
-
 p('数字对象a的类型是: '+typeof(a));
 var c = a.valueOf();
 p('通过valueOf()返回的值的类型是: '+typeof(c));
-
 var x = '5';
 var y = new String(x);
 document.write("变量x的值是:"+x);
@@ -363,18 +358,14 @@ document.write('字符串x的值: '+x);
 document.write('<br>');
 document.write('x.substring (0,3) 获取位0到3的字符串： '+x.substring(0,3));
 document.write('<br>');
-
 var x = new String("Hello This Is JavaScript");
 // document.write('字符串x的值: '+x);
 // document.write('<br>');
-
 var y = x.split(" ");
 document.write('通过空格分隔split(" "),得到数组'+y);
 document.write('<br>');
-
 var z = x.split(" ", 2);
 document.write('通过空格分隔split(" ",2),得到数组，并且只保留前两个'+z);
-*/
 function p(s){
     document.write(s);
     document.write('<br>');
@@ -387,16 +378,166 @@ p('只替换第一个 a:  '+y);
 var regs = new RegExp('a','g');
 var z = x.replace(regs,'o');
 p('替换掉所有的 a:  '+z);
-*/
 var temp =x.charAt(0);
 p('charAt返回的值: '+temp); // H
 p('其类型是: '+ typeof temp);
-
 var temp = x.concat('!!!');
 p('concat返回的值'+temp);
 p('其类型是: '+ typeof temp);
-
 var temp = x.substring(0,5);
 p('substring返回的值: '+ temp);
 p('其类型是: '+ typeof temp);
+*/
+// function p(s,v){
+//     document.write(s+' '+v);
+//     document.write('<br>');
+// }
+// var x = new Array(); // 创建长度是0的数组
+// //p('通过 new Array()创建一个空数组: ',x);
+// x = new Array(5);
+//p('通过 new Array(5)创建一个长度是5的数组: ', x); // 数组元素undefined
+//p('像new Array(5) 这样没有赋初值的方式创建的数组，每个元素的值都是:', x[0]);
+//var x = new Array(3,1,4,1,5,9,2,6);
+//p('创建有初值的数组new Array(3,1,4,1,5,9,2,6) :', x);
+//p('当前数组是:'+x);
+//p('通过.length获取当前数组的长度:'+x.length);
+/*
+var x = new Array(3,1,4);
+p("使用普通的for循环遍历数组");
+for(i=0;i<x.length;i++){
+    p(x[i]);
+}
+p("使用增强for循环遍历数组");
+for(i in x){
+    p(x[i]);
+}
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+var y = new Array(1,5,9,2,6);
+var z = x.concat(y);
+p('数组z是:'+z);
+var x = new Array(3,1,4);
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+var y = new Array(1,5,9,2,6);
+var z = x.concat(y);
+p('数组z是:'+z);
+*/
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+// var x = new Array(3,1,4,1,5,9,2,6);
+// // p('数组x是:'+x);
+// // var y = x.slice(1);
+// // p('x.slice(1)获取的子数组是:'+y); // 从index 1之后开始截取
+// // var z = x.slice(1,3);
+// // p('x.slice(1,3)获取的子数组是:'+z);
+// x.splice(3,2);
+// p('x.splice (3,2) 表示从位置3开始 ，删除2个元素:'+x);
+// x.splice(3,0,1,5);
+// p('x.splice(3,0,1,5) 从位置3开始，删除0个元素，但是插入1和5,最后得到:'+x);
+// /*
+// var x = new Array(3,1,4);
+// x.unshift(5);
+// p('对数组 unshift 值5(在最前面加)，数组变为:'+ x);
+// var e = x.shift();
+// p('从数组中 shift 一个数(从最前面取)，其值是:'+ e);
+// p('shift之后，数组变为:'+ x);
+
+// var x = new Array(3,1,4,1,5,9,2,6);
+// //x.sort();
+// //p('使用sort排序后的数组x是:'+x);
+// function comparator(v1, v2){
+//     return v2-v1;
+// }
+// x.sort(comparator);
+// p('使用sort 进行自定义倒排序后的数组x是:'+x);
+// */
+//x.push(5);
+//p('向x中push 5,得到 '+x);
+//var e = x.pop();
+//var e = x.pop();
+//p('从x中pop一个值出来，其值是 ' + e);
+//p('pop之后，x数组的值是:'+ x);
+//var y = x.join();
+//p('y = x.join() 得到的是数组x的字符串表达，其值是'+y+" 其类型是 :"+typeof y);
+//var z = x.join('@');
+//p('z = x.join("@");是x的字符串表达，不过分隔符不是默认的"," 而是"@" : '+z);
+// function p(s){
+//     document.write(s);
+//     document.write('<br>');
+// }
+// var x = new Array(1,3,4,5,7,7,4,5,6,7,7);
+// p('数组x是: '+x);
+// for(i = 0;i<x.length;i++){
+//     for(j =i+1;j<x.length;j++){
+//         if(x[i]==x[j]){
+//             x.splice(j,1); // 1代表删除一个
+//             j--;
+//         }
+//     }
+// }
+// x.sort();
+// p('对数组排序后并且无重复数据: '+x);
+
+//document.write(x);
+//var uniq = [new Set(x)];
+//const array = Array.from(uniq);
+//document.write(array.values);
+//document.write(uniq.toString());
+//console.log(new Array(...uniq).join(' '));
+// console.log(
+//     Array.from(uniq.values())
+// )
+/*
+function sort(a){
+    if(!a || a.length == 0){
+        return;
+    }
+    a.sort(function(a,b){
+        return a-b;
+    })
+    var result = new Array();
+    //result[0] = a[0];
+    for(i=0;i<a.length;i++){
+        if(a[i-1] != a[i]){
+            result.push(a[i]);
+        }
+    }
+    return result;
+}
+var y = sort(new Array(1,3,4,5,7,7,4,5,6,7,7));
+document.write(y)
+*/
+// var string = new String('hello world');
+// string.sort();
+// document.write(string);
+// var d = new Date();
+//document.write('new Date():'+d);
+// document.write('分别获取年月日: ');
+// document.write(d.getFullYear());
+// document.write('/');
+// document.write(d.getMonth()+1);// getMonth()返回的月数，是基零的，0代表1月份
+// document.write('/');
+// document.write(d.getDate());
+// document.write('<br>')
+// document.write("分别获取时:分:秒:毫秒 ")
+// document.write(d.getHours());
+// document.write(":");
+// document.write(d.getMinutes());
+// document.write(":");
+// document.write(d.getSeconds());
+// document.write(":");
+// document.write(d.getMilliseconds());
+var day = new Date().getDay();
+var weeks = new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六");
+document.write("今天是 ： "+weeks[day]);
+// 经历的毫秒数
+var time = new Date().getTime();
+document.write("从1970/1/1 08:00:00 到今天的毫秒数： "+time);
 
