@@ -550,7 +550,37 @@ d.setHours(0);
 d.setMinutes(0);
 d.setSeconds(0);
 document.write(d);
-*/
 dateString = ''+1234;
 document.write(typeof (dateString));
+
+document.write(Math.E);
+document.write('<br>');
+document.write(Math.PI);
+//document.write(Math.pow(3,3));
+document.write("十个 5-10 之间的随机数 : Math.round(Math.random() *5)+5 ");
+document.write('<br>');
+for(i=0;i<10;i++){
+    document.write(Math.round(Math.random()*5 + 5));
+    document.write('<br>');
+}
+
+var hero = new Object();
+hero.name= '盖伦';
+hero.kill = function(){
+    document.write(hero.name+'正在杀敌');
+}
+hero.kill();
+*/
+function Hero(name){
+    this.name = name;
+    this.kill = function(){
+        document.write(this.name+'正在杀敌');
+    }
+}
+var gareen = new Hero('盖伦');
+gareen.kill();
+document.write('<br>');
+var teemo = new Hero('提莫');
+teemo.kill();
+
 
