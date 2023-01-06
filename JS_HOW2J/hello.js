@@ -534,10 +534,23 @@ document.write(y)
 // document.write(d.getSeconds());
 // document.write(":");
 // document.write(d.getMilliseconds());
-var day = new Date().getDay();
-var weeks = new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六");
-document.write("今天是 ： "+weeks[day]);
+//var day = new Date().getDay();
+//var weeks = new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六");
+//document.write("今天是 ： "+weeks[day]);
 // 经历的毫秒数
-var time = new Date().getTime();
-document.write("从1970/1/1 08:00:00 到今天的毫秒数： "+time);
+//var time = new Date().getTime();
+//document.write("从1970/1/1 08:00:00 到今天的毫秒数： "+time);
+/*
+var d = new Date();
+document.write("修改日期对象的值为世界末日:<br>");
+d.setFullYear(2012);
+d.setMonth(11); // 0 为基底，11表示12月;
+d.setDate(12);
+d.setHours(0);
+d.setMinutes(0);
+d.setSeconds(0);
+document.write(d);
+*/
+dateString = ''+1234;
+document.write(typeof (dateString));
 

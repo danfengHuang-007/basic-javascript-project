@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function compute(){
+            /*
+            var bornDay = ""+document.getElementById('year').value+document.getElementById('month').value+document.getElementById('day').value;
+            var today = new date();
+            var birthDate = new Date(bornDay);
+            var age = today.getFullYear() - birthDate.getFullYear();
+            var m = today.getMonth() - birthDate.getMonth();
+            if(m<0||(m==0 && today.getDate()<birthDate.getDate())){
+                age--;
+            }
+            document.getElementById('age').innerText = age;
+            //return document.getElementById('age').value;
+        
+           // return age;
+           */
+           
+           let year = document.getElementById("year").value;
+            let month = document.getElementById("month").value;
+            let day = document.getElementById("day").value;
+            let date = new Date();
+            date.setFullYear(year);
+            date.setMonth(month-1);
+            date.setDate(day);
+            date.setHours(0);
+            date.setMinutes(0);
+            date.setSeconds(0);
+            var today = new Date().getTime();
+            var a = today-date.getTime();
+            //公历一年时间是365天4小时18分 一年毫秒数
+            var b = ((365*24+4)*60+18)*60*1000
+            document.getElementById("age").innerText= (a/b);
+            
+ 
+        }
+       
+    </script>
+</head>
+<body>
+    
+    <p><strong>请输入出生 年 月 日</strong></p>
+    <div>
+        <strong>年份</strong> <input id="year" type="number">
+        <strong>月份</strong> <input id="month" type="number">
+        <strong>日</strong> <input id="day" type="number">
+    </div><br />
+    <input type="button" id="compute" onclick="compute()" value="计算年龄"/>
+    <br><br/>
+    <strong>年龄</strong>
+    <span id="age"> </span>
+    <strong>岁</strong>
+
+</body>
+</html>
