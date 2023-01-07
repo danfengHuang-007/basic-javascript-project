@@ -570,7 +570,6 @@ hero.kill = function(){
     document.write(hero.name+'正在杀敌');
 }
 hero.kill();
-*/
 function Hero(name){
     this.name = name;
     this.kill = function(){
@@ -582,5 +581,93 @@ gareen.kill();
 document.write('<br>');
 var teemo = new Hero('提莫');
 teemo.kill();
+// 为已经存在的对象 创建新的方法 用prototype
+Hero.prototype.keng = function(){
+    document.write(this.name+"正在坑队友<br>")
+};
+gareen.keng();
+teemo.keng();
+document.write("文档显示区域的宽度"+window.innerWidth);
+document.write('<br>');
+document.write("文档显示区域的高度"+window.innerHeight);
+document.write('<br>');
+document.write("浏览器的宽度:"+window.outerWidth);
+document.write('<br>');
+document.write("浏览器的高度:"+window.outerHeight);
+function openNewWindow(){
+    myWindow = window.open('/');
+}
+document.write("<p>浏览器产品名称：")
+document.write(navigator.appName + '<p>');
+document.write("用户的屏幕分辨率: ");
+document.write(screen.width + "*" + screen.height);
+document.write('<br>');
+document.write("可用区域大小: ")
+document.write('<br>');
+document.write(screen.availWidth + '*' + screen.availHeight)
+function goback(){
+    history.back();
+}
+function goback(){
+    history.back(-2);
+}
+var d = new Date();
+document.write(d.getHours());
+document.write(":");
+document.write(d.getMinutes());
+document.write(":");
+document.write(d.getSeconds());
+document.write(':')
+document.write(d.getMilliseconds());
+function reLoad(){
+    location.reload();
+}
+function jump(){
+    location = '/';
+}
+function p(s){
+    document.write(s);
+    document.write('<br>');
+}
+p('协议 location.protocol:'+location.protocol);
+p("主机名 location.hostname:"+ location.hostname);
+function register(){
+    alert('Suman是傻逼');
+}
+
+function del(){
+    var d = confirm('是否要删除');
+    alert(typeof d + " " + d);
+}
+function p(){
+    var name = prompt('请输入用户名:')
+    alert('您输入的用户名'+name);
+}
+*/
+
+function printTime(){
+    var d = new Date();
+    var h = d.getHours();
+    document.write(h);
+    document.write(":");
+    var m = d.getMinutes();
+    document.write(m);
+    document.write(":");
+    var s = d.getSeconds();
+    document.write(s);
+    document.close();
+   // document.getElementById('time').innerHTML = h+":" +m+":"+s;
+    /*
+    if(s%5==0){
+        clearInterval(t);
+    }
+    */
+}
+var t = setInterval(printTime,1000);
 
 
+/*
+function showTimeIn3Seconds(){
+    setTimeout(printTime,3000);
+}
+*/

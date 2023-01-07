@@ -11,7 +11,22 @@
     <button onclick="document.getElementById('text').style.display='none'">hide contents</button>
     <button onclick="document.getElementById('text').style.display='block'">show contents</button>
     <p id="text">这个是一段可以被javascript隐藏的文本</p>
+
     <button onclick="showHello()" >click</button>
+    <button onclick = "openNewWindow()">打开一个新窗口</button>
+    <button onclick = 'goback()'>返回上上次</button>
+    <button onclick = 'reLoad()'>刷新当前页面</button>
+    <button onclick="jump()">跳转到首页</button>
+    
+    <button onclick="register()">Kurrajong</button>
+    <button onclick="del()">删除</button>
+    <button onclick="p()">请输入用户名</button>
+    <div id="time"></div>
+    <button onclick="showTimeIn3Seconds()">点击后3秒钟后显示当前时间，并且只显示一次</button>;
+    <p>每隔1秒钟,打印当前时间</p>
+    <div id="time"></div>
+    <p>每隔1秒钟，通过document.write打印当前时间</p>
+
 </body>
 
 </html>
