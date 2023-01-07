@@ -1,6 +1,10 @@
 #increment-btn{
     background-color: darkred;
 }
+#save-btn{
+    background-color: green;
+    
+}
 button{
     border: none;
     padding-top: 10px;
