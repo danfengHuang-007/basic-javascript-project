@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    
+</head>
+<body>
+    <div id="d1">傻逼Suman</div>
+    <div>hello javascript</div>
+    <div>hello bom</div>
+    <div>hello dom</div>
+    <h1 class="d">hello world </h1>
+    <h2 class="d">hello nima</h2>
+    <h3 class="d">hello shabi</h3>
+    用户名 <input name="userName"><br>
+    密码   <input name="userPassword">
+    <div id="d2" align="center" class="abc">Hello World</div>
+    <div id="d3">Hello World</div>
+</body>
+<script>
+    function get(){
+        var input1 = document.getElementById('input1');
+        var s = 'id='+input1.id + '<br>';
+        s += 'value='+input1.value + '<br>';
+        s += 'class='+input1.className +'<br>';
+        s += 'test='+input1.getAttribute('test')+'<br>';
+        s += 'test='+input1.attributes['test'].nodeValue+'<br>';
+        
+        document.getElementById('d3').innerHTML = s;
+
+    }
+    
+/*
+    function changeDiv1(){
+        document.getElementById('d3').childNodes[0].nodeValue='通过childNode[0].value改变内容';
+    }
+    function changeDiv2(){
+        document.getElementById('d3').innerHTML = 'Suman是傻逼';
+    }
+
+    
+    function p(s){
+        document.write(s);
+        document.write('<br>');
+    }
+    var div3 = document.getElementById('d3');
+    p("document的节点名称:"+document.nodeName);
+    p("div元素节点的节点名称:"+div3.nodeName);
+    p("div下属性节点的节点名称:"+div3.attributes[0].nodeName);
+    p("div下内容节点的节点名称:"+div3.childNodes[0].nodeName);
+    p("document是没有nodeValue的："+document.nodeValue);
+    p("元素节点是没有nodeValue的："+div3.nodeValue);
+    p("属性节点id的nodeValue："+div3.attributes[0].nodeValue);
+    p("内容节点的nodeValue："+div3.childNodes[0].nodeValue);
+    p("document的nodeType是："+document.nodeType);
+    p("元素节点的nodeType是："+div3.nodeType);
+    p("属性节点的nodeType是："+div3.attributes[0].nodeType);
+    p("内容节点的nodeType是："+div3.childNodes[0].nodeType);
+
+    var div2 = document.getElementById('d2');
+    var content = div2.childNodes[0];
+    document.write('div的内容节点名是:'+content.nodeName);
+    document.write('<br>');
+    document.write('div的内容节点值是:'+content.nodeValue);
+
+    
+    var as = div2.attributes;// 属性存放在一个数组里
+    document.write('div2总共有'+as.length+" 个属性");
+    document.write('分别是:');
+    for(i = 0;i<as.length;i++){
+        document.write('<br>');
+        document.write(as[i].nodeName);
+        document.write(':');
+        document.write(as[i].nodeValue);
+    }
+    document.write('<br>');
+    document.write('div的id属性值是:'+as['id'].nodeValue);
+    
+    var elements = document.getElementsByName('userName');
+    for(i=0;i<elements.length;i++){
+        document.write(elements[i]);
+        document.write('<br>');
+    }
+    
+    var divs = document.getElementsByTagName('div');
+    for(i=0;i<divs.length;i++){
+        document.write(divs[i]);
+        document.write('<br>');
+    }
+
+    var div2 = document.getElementsByClassName('d');
+    for(i=0;i<div2.length;i++){
+        document.write(div2[i]);
+        document.write('<br>');
+    }
+
+    //var div1 = document.getElementById('d1');
+    //document.write(div1);
+    function p(s){
+        document.write(s);
+        document.write('<br>');
+    }
+    var div1 = document.getElementById('d1');
+    p('文档节点'+document);
+    p('元素'+div1);
+    p('属性节点'+div1.attributes[0]);
+
+    p('内容节点'+div1.childNodes[0]);
+    */
+</script>
+<button onclick="changeDiv1()">通过内容节点方式改变div的内容</button>
+<button onclick="changeDiv2()">通过innerHTML改变div的内容</button>
+<input id="input1" class="class1 class2" test="t1" value="这是一个输入框">
+<br>
+<button onclick="get()">获取input的属性</button>
+<div style="height: 30px;"></div>
+
+</html>
