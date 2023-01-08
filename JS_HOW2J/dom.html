@@ -19,8 +19,33 @@
     密码   <input name="userPassword">
     <div id="d2" align="center" class="abc">Hello World</div>
     <div id="d3">Hello World</div>
+    <br>
+    <div id="d">
+        这是一个div
+    </div>
+    <button onclick="hide()">隐藏div</button>
+    <button onclick="show()">显示div</button>
+    <br>
+    <div id="d4" style="background-color:brown">Hello World</div>
+    <button onclick="change()">改变div的背景色</button>
 </body>
 <script>
+    function hide(){
+        var d = document.getElementById('d');
+        d.style.display = 'none';
+    }
+
+    function show(){
+        var d = document.getElementById('d');
+        d.style.display = 'block';
+    }
+
+    function change(){
+        var d1 = document.getElementById('d4');
+        d1.style.backgroundColor = 'green' ;
+
+    }
+    /*
     function get(){
         var input1 = document.getElementById('input1');
         var s = 'id='+input1.id + '<br>';
@@ -33,7 +58,7 @@
 
     }
     
-/*
+
     function changeDiv1(){
         document.getElementById('d3').childNodes[0].nodeValue='通过childNode[0].value改变内容';
     }
