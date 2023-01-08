@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verify(){
+            var str = document.getElementById("input1").value;
+            if(str.startsWith('a')){
+                document.write('该账号已存在');
+            }
+
+            if(str.startsWith('A')){
+                document.write('该账号已存在');
+            }
+        }
+
+        function changePic(){
+            document.getElementById('picture').src="/business clothe matching 1.png";
+        }
+        function changePic2(){
+            document.getElementById('picture').attributes[0].nodeValue = '/pictures/jackMa with Alibaba.jpg';
+        }
+
+        function verify2(){
+            var result = document.getElementById('input2').value;
+            if(parseInt(result) ==result ){
+                document.write('it is a integer!')
+            }else{
+                document.write('please input an integer')
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="input1">
+    <button onclick="verify()">验证</button>
+    <br>
+    <img src="/pictures/jackMa with Alibaba.jpg" id="picture">
+    <button onclick="changePic()">通过src属性切换图片1</button>
+    <br>
+    <button oncanplay="changePic2()">通过属性节点切换图片2</button>
+    <br>
+    <input id="input2">
+    <button onclick="verify2()">判断</button>
+
+</body>
+</html>
