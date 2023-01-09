@@ -28,8 +28,95 @@
     <br>
     <div id="d4" style="background-color:brown">Hello World</div>
     <button onclick="change()">改变div的背景色</button>
+    <input type="text" onfocus="f()" onblur="b()" id="input1" placeholder="输入框">
+    <br>
+    <br>
+    <input type="text" id="input2" placeholder="输入框2">
+    <br>
+    <br>
+    <div id="message"></div>
+    <input type="button" onmousedown="down()" onmouseup="up()" value="用于演示按下和弹起">
+    <br>
+    <br>
+
+    <input type="button" onmousemove="move()" value="用于演示鼠标经过">
+    <br>
+    <br>
+
+    <input type="button" onmouseover="over()" value="用于演示鼠标进入">
+    <br>
+    <br>
+
+    <input type="button" onmouseout="out()" value="用于演示鼠标退出">
+    <br>
+    <br>
+    <div id="message1"></div>
+    <p>记得要先用鼠标选中该组件，然后敲击键盘</p>
+    <br>
+    <input type="button" onkeydown="down(event)" value="用于演示按下keydown">
+    <br>
+    <br>
+
+    <input type="button" onkeypress="press(event)" value="用于演示按下keypress">
+    <br>
+    <br>
+
+    <input type="button" onkeyup="up()" value="用于演示弹起">
+    <br>
+    <br>
+
+    <div id="message3">
+
+    </div>
+
+
+
+
 </body>
 <script>
+    var number = 0;
+    function down(e){
+        var text = '按下了键' +e.keyCode;
+        if(e.shiftKey==1){
+            text += '并且按下了shift键';
+        }
+        document.getElementById('message3').innerHTML=text;
+    }
+    function up(){
+        document.getElementById('message3').innerHTML='弹起了键盘';
+    }
+    function press(e){
+        var text ='按下了键' + e.keyCode;
+        if(e.shiftKey==1){
+            text += '并且按下了shift键';
+        }
+        document.getElementById('message3').innerHTML=text;
+    }
+    /*
+    function down(){
+        document.getElementById('message1').innerHTML='按下了鼠标';
+    }
+    function up(){
+        document.getElementById('message1').innerHTML='弹起了鼠标';
+    }
+    function move(){
+        document.getElementById('message1').innerHTML='鼠标经过次数:'+(++number);
+    }
+    function over(){
+        document.getElementById('message1').innerHTML = '鼠标进入次数:'+(++number);
+    }
+    function out(){
+        document.getElementById('message1').innerHTML='鼠标退出';
+        number = 0;
+    }
+
+    function f(){
+        document.getElementById('message').innerHTML = '输入框1获取了焦点';
+    }
+    function b(){
+        document.getElementById('message').innerHTML ='输入框1失去了焦点';
+    }
+    
     function hide(){
         var d = document.getElementById('d');
         d.style.display = 'none';
@@ -45,7 +132,7 @@
         d1.style.backgroundColor = 'green' ;
 
     }
-    /*
+    
     function get(){
         var input1 = document.getElementById('input1');
         var s = 'id='+input1.id + '<br>';
