@@ -7,7 +7,10 @@
     <title>HTML DOM</title>
     
 </head>
-<body>
+<body onload="loadBody()">
+    <div id="message6"></div>
+    <div id="message7"></div>
+    <img onload="loadImg()" src="/pictures/jackMa with Alibaba.jpg">
     <div id="d1">傻逼Suman</div>
     <div>hello javascript</div>
     <div>hello bom</div>
@@ -65,15 +68,65 @@
     <br>
     <br>
 
-    <div id="message3">
-
-    </div>
-
-
-
-
+    <div id="message3"></div>
+    <input type="button" onclick="singleClick()" ondblclick="doubleClick()" value="用于演示单击和双击">
+    <br>
+    <br>
+    <div id="message4"></div>
+    <input type="text" id="t1" onchange="change()" value="">
+    <br>
+    <br>
+    <input type="button" value="令输入框失去焦点的按钮">
+    <br>
+    <br>
+    <div id="message5"></div>
+    <form action="/study/login.jsp" onsubmit="login()">
+    账号: <input type="text" name="name"> <br>
+    密码: <input type="password" name="password"> <br>
+    <input type="submit" value="登陆">
+    </form>
+    <input type="button" onclick="singleClick(this)" value="演示this的按钮1">
+    <input type="button" onclick="singleClick(this)" value="演示this的按钮2">
+    <br>
+    <br>
+    <div id="message8" ></div>
+    <br>
+    <form method="post" action="www.google.com" onsubmit="return login()">
+        账号: <input id="name" type="text" name="name"> <br>
+        密码: <input type="password" name="password"> <br>
+        <input type="submit" value="登录">
+    </form>
 </body>
 <script>
+    function login(){
+        var name = document.getElementById('name');
+        if(name.value.length==0){
+            alert('用户名不能为空');
+            return false;
+        }
+        return true;
+    }
+    /*
+    function singleClick(button){
+        var s ='被点击的按钮上的文本是: ' + button.value;
+        document.getElementById('message8').innerHTML = s;
+    }
+    function loadBody(){
+        document.getElementById('message6').innerHTML='文档加载成功';
+    }
+    function loadImg(){
+        document.getElementById('message7').innerHTML='图片加载成功';
+    }
+    function login(){
+        alert('提交表单');
+    }
+
+    function change(){
+        var message = document.getElementById('message5');
+        var t1 = document.getElementById('t1');
+        message.innerHTML = '输入框的值变为了: ' + t1.value;
+    }
+
     var number = 0;
     function down(e){
         var text = '按下了键' +e.keyCode;
@@ -92,7 +145,13 @@
         }
         document.getElementById('message3').innerHTML=text;
     }
-    /*
+    function singleClick(){
+        document.getElementById('message4').innerHTML='单机按钮';
+    }
+    function doubleClick(){
+        document.getElementById('message4').innerHTML='双击按钮';
+    }
+    
     function down(){
         document.getElementById('message1').innerHTML='按下了鼠标';
     }
