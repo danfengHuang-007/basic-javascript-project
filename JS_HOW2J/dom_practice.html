@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.menu{
+            display: block;
+            border: 1px lightgrey solid;
+            width: 75px;
+        }
+        a.t{
+            display: block;
+            padding-left: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 20px;
+            text-decoration: none;
+            color:gray;
+        }
+        a.t.hover{
+            background-color: lightgrey;
+        }
+        a#d1{
+            padding-left:5px;
+            padding-left: 5px;
+            padding-bottom: 10px;
+            padding-right:20px;
+            text-decoration: none;
+            color:gray;
+            margin-right:20px;
+            white-space:nowrap;
+        }
+        td{
+            width:80px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>下拉列表连接</p>
+    <table>
+        <tr>
+            <td>
+                <a id="d1" href="" onmouseover='over1()'onmouseout='out1()'><span>武器</span></a>
+            </td>
+            <td>
+                <a id="d1" href="" onmouseover='over2()'onmouseout='out2()'><span>护甲</span></a>
+            </td>
+            <td>
+                <a id="d1" href="" onmouseover='over3()'onmouseout='out3()'><span>英雄</span></a>
+            </td>
+        </tr>
+    </table>
+    <div class="menu" id="s1">
+        <a class="t" id="t1" href="">大剑</a>
+        <a class="t" id="t1" href="">屠龙</a>
+        <a class="t" id="t1" href="">倚天</a>
+        <a class="t" id="t1" href="">板砖</a>
+    </div>
+    <div class="menu" id="s2">
+        <a class="t" id="t2" href="">胸甲</a>
+        <a class="t" id="t2" href="">护腕</a>
+        <a class="t" id="t2" href="">头盔</a>
+        <a class="t" id="t2" href="">鞋子</a>
+    </div>
+    <div class="menu" id="s3">
+        <a class="t" id="t3" href="">盖伦</a>
+        <a class="t" id="t3" href="">提莫</a>
+        <a class="t" id="t3" href="">安妮</a>
+        <a class="t" id="t3" href="">死歌</a>
+    </div>
+    <div onmouseover="out()">这个是内容框</div>
+    <script>
+        var s1 = document.getElementById('s1');
+        var s2 = document.getElementById('s2');
+        var s3 = document.getElementById('s3');
+        function hide(s){
+            s.style.display = 'none';
+        }
+        function show(s){
+            s.style.display = 'block';
+        }
+        function over1(){
+            show(s1);
+            hide(s2);
+            hide(s3);
+        }
+        function over2(){
+            show(s2);
+            s2.style.marginLeft = '76px'
+            hide(s1);
+            hide(s3);
+        }
+        function over3(){
+            show(s3);
+            s3.style.marginLeft='151px';
+            hide(s1);
+            hide(s2);
+        }
+        function out(){
+            hide(s1);
+            hide(s2);
+            hide(s3);
+        }
+    </script>
+
+
+</body>
+</html>
